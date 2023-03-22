@@ -81,16 +81,27 @@ const loadQuestion = () => {
 }
 
 
+// const submitQuiz = () => { // this function will check the answers
+//     const ans = getAnswer()
+//     if (ans == data.correct) { // if the answer is correct
+//         right++
+//     } else { // if the answer is wrong
+//         wrong++
+//     }
+//     index++; // moving to next question
+//     loadQuestion()
+//     return
+// };
+
+// new logic, if wrong answer, dont go on next
 const submitQuiz = () => { // this function will check the answers
     const ans = getAnswer()
     if (ans == data.correct) { // if the answer is correct
-        right++
-    } else { // if the answer is wrong
-        wrong++
-    }
-    index++; // moving to next question
-    loadQuestion()
-    return
+        index++; // moving to next question
+        loadQuestion()
+        return
+    }
+    
 };
 
 const getAnswer = () => {
